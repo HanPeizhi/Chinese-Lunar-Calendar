@@ -6,3 +6,6 @@ http://pan.baidu.com/s/1pLpuahX
 
 然后感谢晶晶的博客：
 http://blog.jjonline.cn/userInterFace/173.html
+
+最后感谢CSDN上lin11110提供的二十四节气数据：
+http://pan.baidu.com/s/1pLpuahX
