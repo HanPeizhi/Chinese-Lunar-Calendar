@@ -268,9 +268,27 @@ def Lunar(y, m, d):
     #print('rizhi', dizhi[rizhi])
 
 
+tianganNum={"甲": 1, "乙": 2, "丙": 3, "丁": 4, "戊": 5, "己": 6, "庚": 7, "辛": 8, "壬": 9, "癸": 10}
+dizhiNum={'子': 1, "丑": 2, "寅": 3, "卯": 4, "辰": 5, "巳": 6, "午": 7, "未": 8, "申": 9,"酉": 10, "戌": 11, "亥": 12}
+shiZhiStr={23:'子', 24:'子', 0: '子', 1: '丑', 2: '丑', 3: '寅', 4: '寅', 5: '卯', 6: '卯', 7: '辰', 8: '辰', 9: '巳',
+           10: '巳', 11: '午', 12: '午', 13: '未', 14: '未', 15: '申', 16: '申', 17: '酉', 18: '酉', 19: '戌', 20: '戌',
+           21: '亥', 22: '亥'}
+
+
+def setShiGanZhi(ch, riGanZhi):
+    riGanNum = tianganNum[riGanZhi[0]]
+    # riZhiNum = dizhiNum[riGanZhi[1]]
+    shiZhiNum = dizhiNum[shiZhiStr[int(ch)]]
+    shiGanZhi = tiangan[(riGanNum * 2 + shiZhiNum -2) % 10 -1] + shiZhiStr[int(ch)]
+    print('shiGanZhi   时干支：', shiGanZhi)
+    #shiGanNum = (riGanNum * 2 + shiZhiNum -2) % 10
+    # shiGanNum = riGanNum*2 +
+
 # 1900 - 2050
 Lunar(2017, 3, 5)
 print("yueganzhi   月干支：", solarTerm(2017, 3, 5, 23, 40))
+
+setShiGanZhi(14, '丁亥')
 
 
 
